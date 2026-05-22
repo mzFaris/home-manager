@@ -14,7 +14,7 @@
     languages = {
       language-server = {
         phpactor = {
-          command = "phpactor";
+          command = lib.getExe pkgs.phpactor;
           args = [ "language-server" ];
         };
       };
@@ -25,7 +25,7 @@
             "typescript-language-server"
           ];
           formatter = {
-            command = "deno";
+            command = lib.getExe pkgs.deno;
             args = [
               "fmt"
               "-"
@@ -41,7 +41,7 @@
             "typescript-language-server"
           ];
           formatter = {
-            command = "deno";
+            command = lib.getExe pkgs.deno;
             args = [
               "fmt"
               "-"
@@ -57,7 +57,7 @@
             "typescript-language-server"
           ];
           formatter = {
-            command = "deno";
+            command = lib.getExe pkgs.deno;
             args = [
               "fmt"
               "-"
@@ -73,7 +73,7 @@
             "typescript-language-server"
           ];
           formatter = {
-            command = "deno";
+            command = lib.getExe pkgs.deno;
             args = [
               "fmt"
               "-"
@@ -90,7 +90,7 @@
         {
           name = "nix";
           auto-format = true;
-          formatter.command = lib.getExe pkgs.nixfmt-rfc-style;
+          formatter.command = lib.getExe pkgs.nixfmt;
         }
         {
           name = "go";
